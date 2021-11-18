@@ -72,7 +72,7 @@ const Characters = () => {
                            </Card.Body>
                         </div>
                         { create === true? <div>
-                        <Card.Img variant="top" src={chat.image} id="person-img"/>
+                        <Card.Img variant="top" src={character7} id="person-img"/>
                              <Card.Body className="bg-white">
                                 <Card.Title  id="p-title">{chat.title}</Card.Title>
                                 <Card.Text id="p-body">
