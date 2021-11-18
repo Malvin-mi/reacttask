@@ -41,8 +41,15 @@ const Characters = () => {
     let newChar = localStorage.getItem('singChar');
 
     let chat = JSON.parse(newChar);
+    console.log(chat);
+    //for creating new character
+    const [create, setCreate] = useState(false);
 
-    persons.push(chat);
+    const handleCreate = () => {
+        setCreate(true)
+    }; 
+
+
 
 
     return (
@@ -64,12 +71,22 @@ const Characters = () => {
                                 </Card.Text>
                            </Card.Body>
                         </div>
+                        { create === true? <div>
+                        <Card.Img variant="top" src={chat.image} id="person-img"/>
+                             <Card.Body className="bg-white">
+                                <Card.Title  id="p-title">{chat.title}</Card.Title>
+                                <Card.Text id="p-body">
+                                {chat.body}
+                                </Card.Text>
+                           </Card.Body>
+                        </div>: ''}
+                       
                    
                    
                     </Card>
                 </Col>
                 ))}
-                 <CharModal />
+                 <CharModal create={handleCreate}/>
              </Row>
             </div>  
          

@@ -6,10 +6,13 @@ import { Form } from "react-bootstrap";
 import character6 from "../images/characters/character6.png"
 
 
-export default function CharModal() {
+export default function CharModal({create}) {
   const [show, setShow] = useState(false);
  
-  const handleShow = () => setShow(true);
+  const handleShow = () => {
+        setShow(true)
+        create()
+      };
 
   const [image, setImage] = useState('');
   const [name, setName] = useState('');
