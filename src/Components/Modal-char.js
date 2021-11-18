@@ -11,7 +11,7 @@ export default function CharModal({create}) {
  
   const handleShow = () => {
         setShow(true)
-        create()
+        // create()
       };
 
   const [image, setImage] = useState('');
@@ -82,7 +82,7 @@ const handleClose = () => {
           
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose} id="mcancel-btn">
+          <Button variant="secondary" onClick={create} id="mcancel-btn">
             Cancel
           </Button>
           <Button variant="primary" onClick={handleClose}  type="submit" id="mcreate-btn">
