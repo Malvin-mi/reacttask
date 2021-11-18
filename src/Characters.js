@@ -38,11 +38,11 @@ const Characters = () => {
         { title: 'Robert Fox', body: '23 friends', id: 9, image: character9, place: 'Planet alpha', desc:`Robert is a really nice person. He's been living on planet Alpha for the last 10 years.`}
     ])
     
-    // let newChar = localStorage.getItem('singChar');
+    let newChar = localStorage.getItem('singChar');
 
-    // let chat = JSON.parse(newChar);
+    let chat = JSON.parse(newChar);
 
-    // persons.push(chat);
+    persons.push(chat);
 
 
     return (
